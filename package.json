@@ -1,0 +1,19 @@
+{
+  "name": "student-recmmndr",
+  "version": "0.0.1",
+  "description": "Make student recommendations",
+  "main": "web.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "logfmt": "~0.21.0",
+    "express": "~3.4.8"
+  }
+{
+  "engines": {
+    "node": "0.10.x"
+  }
+}}
