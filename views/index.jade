@@ -23,126 +23,127 @@ html(lang='en')
     title #{title}
   body
     div.container
-      table.table.table-striped
-        tr
-          th Student
-          th Accounting
-          th Finance
-          th Marketing
-          th Computer Science
-          th Architecture
-          th Engineering
-        tr              
-          td Dave
-          td
-            input(type="checkbox")
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-        tr              
-          td Sue
-          td
-            input(type="checkbox")
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-        tr              
-          td Steve
-          td
-            input(type="checkbox")
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-        tr              
-          td Beth
-          td
-            input(type="checkbox")
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-        tr              
-          td Nick
-          td
-            input(type="checkbox")
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-        tr              
-          td Amy
-          td
-            input(type="checkbox")
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-        tr              
-          td Lucy
-          td
-            input(type="checkbox")
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-        tr              
-          td Joey
-          td
-            input(type="checkbox")
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")    
-          td
-            input(type="checkbox")
-      button.btn.btn-primary Recommend                                                   
+      form(action='/recommend')
+          table.table.table-striped
+            tr
+              th Student
+              th Accounting
+              th Finance
+              th Marketing
+              th Computer Science
+              th Architecture
+              th Engineering
+            tr              
+              td Dave
+              td
+                input(type="checkbox")
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+            tr              
+              td Sue
+              td
+                input(type="checkbox")
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+            tr              
+              td Steve
+              td
+                input(type="checkbox")
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+            tr              
+              td Beth
+              td
+                input(type="checkbox")
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+            tr              
+              td Nick
+              td
+                input(type="checkbox")
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+            tr              
+              td Amy
+              td
+                input(type="checkbox")
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+            tr              
+              td Lucy
+              td
+                input(type="checkbox")
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+            tr              
+              td Joey
+              td
+                input(type="checkbox")
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")    
+              td
+                input(type="checkbox")
+          button.btn.btn-primary.btn-lg Recommend                                                   
     script(src='/bootstrap/js/bootstrap.min.js')              
