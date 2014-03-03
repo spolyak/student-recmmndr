@@ -6,5 +6,5 @@ module.exports = function(app) {
 
   //routes
   app.get('/', routes.index);
-  app.get('/recommend', recommend.index);
+  app.post('/recommend', recommend.index);
 };

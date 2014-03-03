@@ -11,7 +11,8 @@
   "dependencies": {
     "logfmt": "~0.21.0",
     "express": "~3.4.8",
-	"jade": "~1.3.0"
+	"jade": "~1.3.0",
+	"async": "~0.2.10"
   },
   "repository": {
     "type": "git",

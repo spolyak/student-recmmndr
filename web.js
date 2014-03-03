@@ -4,6 +4,7 @@ var logfmt = require("logfmt");
 var app = express();
 
 app.use(logfmt.requestLogger());
+app.use(express.bodyParser());
 
 // Set the view engine
 app.set('view engine', 'jade');

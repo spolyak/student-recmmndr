@@ -23,7 +23,7 @@ html(lang='en')
     title #{title}
   body
     div.container
-      form(action='/recommend')
+      form(action='/recommend', method="post")
           table.table.table-striped
             tr
               th Student
@@ -36,114 +36,114 @@ html(lang='en')
             tr              
               td Dave
               td
-                input(type="checkbox")
+                input(name="/1/100/5",type="checkbox")
               td
-                input(type="checkbox")    
+                input(name="/1/101/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/1/102/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/1/103/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/1/104/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/1/105/5",type="checkbox")    
             tr              
               td Sue
               td
-                input(type="checkbox")
+                input(name="/2/100/5",type="checkbox")
               td
-                input(type="checkbox")    
+                input(name="/2/101/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/2/102/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/2/103/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/2/104/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/2/105/5",type="checkbox")        
             tr              
               td Steve
               td
-                input(type="checkbox")
+                input(name="/3/100/5",type="checkbox")
               td
-                input(type="checkbox")    
+                input(name="/3/101/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/3/102/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/3/103/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/3/104/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/3/105/5",type="checkbox")    
             tr              
               td Beth
               td
-                input(type="checkbox")
+                input(name="/4/100/5",type="checkbox")
               td
-                input(type="checkbox")    
+                input(name="/4/101/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/4/102/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/4/103/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/4/104/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/4/105/5",type="checkbox")    
             tr              
               td Nick
               td
-                input(type="checkbox")
+                input(name="/5/100/5",type="checkbox")
               td
-                input(type="checkbox")    
+                input(name="/5/101/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/5/102/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/5/103/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/5/104/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/5/105/5",type="checkbox")        
             tr              
               td Amy
               td
-                input(type="checkbox")
+                input(name="/6/100/5",type="checkbox")
               td
-                input(type="checkbox")    
+                input(name="/6/101/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/6/102/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/6/103/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/6/104/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/6/105/5",type="checkbox")      
             tr              
               td Lucy
               td
-                input(type="checkbox")
+                input(name="/7/100/5",type="checkbox")
               td
-                input(type="checkbox")    
+                input(name="/7/101/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/7/102/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/7/103/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/7/104/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/7/105/5",type="checkbox")       
             tr              
               td Joey
               td
-                input(type="checkbox")
+                input(name="/8/100/5",type="checkbox")
               td
-                input(type="checkbox")    
+                input(name="/8/101/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/8/102/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/8/103/5",type="checkbox")    
               td
-                input(type="checkbox")    
+                input(name="/8/104/5",type="checkbox")    
               td
-                input(type="checkbox")
-          button.btn.btn-primary.btn-lg Recommend                                                   
+                input(name="/8/105/5",type="checkbox")    
+          button(type="submit").btn.btn-primary.btn-lg Recommend                                                   
     script(src='/bootstrap/js/bootstrap.min.js')              
