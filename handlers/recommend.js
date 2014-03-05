@@ -4,6 +4,13 @@ var async = require('async');
 
 var RECMMNDR_HOST = "api.rcmmndr.com";
 var RECMMNDR_KEY = '/api_key/WtAN9dlAinrsLycMgTiMmDecYoskLc84HaQUTpFpDgo';
+var majors = {};
+majors['100'] = 'Accounting';
+majors['101'] = 'Finance';
+majors['102'] = 'Marketing';
+majors['103'] = 'Computer Science';
+majors['104'] = 'Architecture';
+majors['105'] = 'Engineering';
 
 function PostPreference(prefstring) {
 	// Build the post string from an object
@@ -35,7 +42,7 @@ function PostPreference(prefstring) {
 
 }
 
-function ClearAllPreferences() {
+function ClearAllPreferences(callback) {
 	var options = {
 		host: RECMMNDR_HOST,
 		port: 80,
@@ -46,15 +53,16 @@ function ClearAllPreferences() {
 	http.get(options, function(resp) {
 		resp.on('data', function(chunk) {
 			console.log('Response: ' + chunk);
+			callback(null, 'clear');
 		});
 	}).on("error", function(e) {
 		console.log("Got error: " + e.message);
+		callback(null, 'clear');
 	});
 
 }
-var recommendation = [];
 
-function GetRecommend(userid) {
+function GetRecommend(userid, res) {
 	var options = {
 		host: RECMMNDR_HOST,
 		port: 80,
@@ -63,8 +71,15 @@ function GetRecommend(userid) {
 
 	http.get(options, function(resp) {
 		resp.on('data', function(chunk) {
-			console.log('Response: ' + chunk);
-			recommendation = chunk;
+			var recommendations = chunk;
+			var recommendation_display = '';
+		    for(var key in JSON.parse(recommendations)){
+				recommendation_display = recommendation_display + ' ' + majors[key];    
+		    }	
+			res.render('recommend', {
+				title: 'recommend',
+				recommend: recommendation_display
+			});		
 		});
 	}).on("error", function(e) {
 		console.log("Got error: " + e.message);
@@ -73,41 +88,21 @@ function GetRecommend(userid) {
 
 exports.index = function(req, res) {
 
-	console.log(req.body);
-
 	async.series([
 		function(callback) {
-			ClearAllPreferences();
-			callback(null, 'clear');
+			ClearAllPreferences(callback);
 	    },
 		function(callback) {
-			//uid,iid,weight
-			PostPreference('/1/100/5');
-			PostPreference('/1/101/5');	
-			PostPreference('/2/100/5');
-			PostPreference('/2/101/5');
-			PostPreference('/3/100/5');
-			PostPreference('/4/100/5');
-			PostPreference('/4/101/5');
-			PostPreference('/5/100/5');
-			PostPreference('/5/101/5');
-			PostPreference('/6/100/5');
-			PostPreference('/6/101/5');	
-			PostPreference('/7/100/5');
-			PostPreference('/7/101/5');	
-			PostPreference('/8/100/5');
-			PostPreference('/8/101/5');																			
+		    for(var key in req.body){
+				//uid,iid,weight
+				PostPreference(key);      
+		    }																		
 			callback(null, 'adds');
 		},
 		function(callback) {
 			//uid
-			GetRecommend('3');
+			GetRecommend('3', res);
 			callback(null, 'recc');
 		}
 	]);
-
-	res.render('recommend', {
-		title: 'recommend',
-		recommend: recommendation
-	});
 };
